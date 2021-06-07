@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vue JS</title>
+  <meta name="description" content="Vue JS">
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  
+</head>
+<body>
+  <div id="app">
+    <p>{{ message }}</p>
+    <p v-bind:title="message_2">Hover your mouse over me for a few seconds to see my dynamically bound title!
+    </p>
+    <span v-if="seen">Now you see me</span>
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+    <p>{{ reverseMessage }}</p>
+    <button v-on:click="reversemessage">Reverse Message</button>
+    <p>{{ typemessage }}</p>
+    <input v-model="typemessage">
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!',
+        message_2: 'You loaded this page on ' + new Date().toLocaleString(),
+        seen: true,
+        todos: [
+          { text: 'Learn JavaScript' },
+          { text: 'Learn Vue' },
+          { text: 'Build something awesome' }
+        ],
+        reverseMessage: "learning vue",
+        typemessage: 'type in me'
+      },
+      methods: {
+        reversemessage: function () {
+          this.reverseMessage = this.reverseMessage.split('').reverse().join('')
+        }
+      }
+    });
+  </script>
+</body>
+</html>
