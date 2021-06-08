@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />        
+        <!-- Include meta tag to ensure proper rendering and touch zooming -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Vue-js development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        
+        <title>Spell your name</title>
+        
+    </head>
+    <body>
+        <div class="widget" id="widget">
+            <h1>Spell your name {{message}}</h1>
+            <div class="widget-form">
+                <label for="name">Enter the text:</label>
+                <input type="text" name="name" id="name" value=""  />
+            </div>
+            <div class="widget-buttons">
+                <button v-on:click="submit" id="submit">Submit</button>
+                <button v-on:click="reset" id="reset">Reset</button>
+            </div>
+            <div class="widget-output"> Output the word
+            </div>
+        </div> 
+        <script type="text/javascript" src="script.js"></script>        
+    </body>
+</html>
