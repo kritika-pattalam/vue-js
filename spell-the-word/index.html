@@ -15,7 +15,7 @@
             <h1>Spell your name {{message}}</h1>
             <div class="widget-form">
                 <label for="name">Enter the text:</label>
-                <input type="text" name="name" id="name" value=""  />
+                <input type="text" name="name" id="name" value=""  v-model="name"/>
             </div>
             <div class="widget-buttons">
                 <button v-on:click="submit" id="submit">Submit</button>
