@@ -21,8 +21,7 @@
                 <button v-on:click="submit" id="submit">Submit</button>
                 <button v-on:click="reset" id="reset">Reset</button>
             </div>
-            <div class="widget-output"> Output the word
-            </div>
+            <div class="widget-output" v:if="show"> Output the word </div>
         </div> 
         <script type="text/javascript" src="script.js"></script>        
     </body>
